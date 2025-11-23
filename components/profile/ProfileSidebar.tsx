@@ -148,11 +148,13 @@ export function ProfileSidebar({
         Follow
       </Button>
 
-      <div className="text-base mb-4">
+      {user.bio && <div className="text-base mb-4">{user.bio}</div>}
+
+      {/* <div className="text-base mb-4">
         {user.company}
         <br />
         {user.location}
-      </div>
+      </div> */}
 
       <div className="flex items-center gap-2 text-muted-foreground mb-4 text-sm">
         <Users className="w-4 h-4" />

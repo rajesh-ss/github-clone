@@ -42,7 +42,7 @@ export default function RootLayout({
             </Suspense>
             {children}
             <footer className="mt-20 py-10 border-t border-border text-center text-xs text-muted-foreground">
-              <div className="flex justify-center gap-4 mb-2">
+              <div className="flex justify-center lg:flex-row flex-col gap-4 mb-2">
                 <span>&copy; 2025 GitHub, Inc.</span>
                 <a href="/" className="hover:text-primary hover:underline">
                   Terms
