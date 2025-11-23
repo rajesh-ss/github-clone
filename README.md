@@ -14,23 +14,79 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🚀 Features Implemented
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Light & Dark Theme Switching
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The entire application supports smooth theme toggling with a GitHub-like UI experience.
 
-## Learn More
+2. Dynamic User Details
 
-To learn more about Next.js, take a look at the following resources:
+User data is fetched dynamically based on the userName present in the URL path.
+Changing the path loads a new user’s details instantly.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. API Interceptor
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+A custom interceptor layer handles all API calls, including:
 
-## Deploy on Vercel
+Attaching tokens where required
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Managing errors
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Consistent API behavior across the app
+
+4. Fallback Error Page
+
+A fallback page is shown if something goes wrong—API failures, invalid user, or unexpected issues.
+
+5. Dynamic Contribution Graph by Year
+
+The contributions heatmap updates whenever a different year is selected.
+All data is dynamically fetched via API.
+
+6. Year Persistence via Search Params
+
+The selected year is stored in URL search params so it persists on refresh and can be shared via link.
+
+7. Dynamic Contribution Activity
+
+The Activity Overview (Commits, PRs, Issues, Code Reviews) updates dynamically using GitHub API data.
+
+8. Server-Side Rendering for Token-Protected API Calls
+
+Components that rely on authenticated API calls use SSR to ensure tokens never reach the client and remain secure.
+
+9. Dynamic Repositories Tab
+
+Repositories list is fully dynamic, populated using the GitHub API with:
+
+Repo details
+
+Stars, forks
+
+Languages
+
+Updated timestamps
+
+🖼️ Screenshots
+
+Screenshots of key features are attached in the repository.
+![](img1.png)
+![](img2.png)
+![](myScreen.png)
+
+🛠️ Tech Stack
+
+Next.js (App Router)
+
+TypeScript
+
+TailwindCSS
+
+Recharts
+
+Next Themes
+
+GitHub REST API
+
+Server-Side Rendering (SSR)

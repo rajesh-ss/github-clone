@@ -184,21 +184,7 @@ export async function OverviewContent({
                           </TooltipProvider>
                         </a>
                       )}
-                      {/* <a
-                        href="#"
-                        className="font-bold text-fgColoraccent hover:underline text-sm truncate"
-                      >
-                        <TooltipProvider>
-                          <Tooltip>
-                            <TooltipTrigger>
-                              {repo.name}
-                            </TooltipTrigger>
-                            <TooltipContent>
-                              <p>{repo.full_name}</p>
-                            </TooltipContent>
-                          </Tooltip>
-                        </TooltipProvider>
-                      </a> */}
+
                       <Badge
                         variant="outline"
                         className="text-[10px] font-normal text-muted-foreground border-border rounded-full px-2"
