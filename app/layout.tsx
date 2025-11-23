@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { Fira_Sans } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
@@ -36,7 +37,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <div className="flex flex-col min-h-screen">
-            <Header />
+            <Suspense>
+              <Header />
+            </Suspense>
             {children}
             <footer className="mt-20 py-10 border-t border-border text-center text-xs text-muted-foreground">
               <div className="flex justify-center gap-4 mb-2">
