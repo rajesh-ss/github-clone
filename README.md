@@ -14,79 +14,69 @@ pnpm dev
 bun dev
 ```
 
-🚀 Features Implemented
+## 🚀 Features Implemented
 
-1. Light & Dark Theme Switching
+1. **Light & Dark Theme Switching**
 
-The entire application supports smooth theme toggling with a GitHub-like UI experience.
+   The entire application supports smooth theme toggling with a GitHub-like UI experience.
 
-2. Dynamic User Details
+2. **Dynamic User Details**
 
-User data is fetched dynamically based on the userName present in the URL path.
-Changing the path loads a new user’s details instantly.
+   User data is fetched dynamically based on the `userName` present in the URL path.
+   Changing the path loads a new user’s details instantly.
 
-3. API Interceptor
+3. **API Interceptor**
 
-A custom interceptor layer handles all API calls, including:
+   A custom interceptor layer handles all API calls, including:
 
-Attaching tokens where required
+   - Attaching tokens where required
+   - Managing errors
+   - Consistent API behavior across the app
 
-Managing errors
+4. **Fallback Error Page**
 
-Consistent API behavior across the app
+   A fallback page is shown if something goes wrong—API failures, invalid user, or unexpected issues.
 
-4. Fallback Error Page
+5. **Dynamic Contribution Graph by Year**
 
-A fallback page is shown if something goes wrong—API failures, invalid user, or unexpected issues.
+   The contributions heatmap updates whenever a different year is selected.
+   All data is dynamically fetched via API.
 
-5. Dynamic Contribution Graph by Year
+6. **Year Persistence via Search Params**
 
-The contributions heatmap updates whenever a different year is selected.
-All data is dynamically fetched via API.
+   The selected year is stored in URL search params so it persists on refresh and can be shared via link.
 
-6. Year Persistence via Search Params
+7. **Dynamic Contribution Activity**
 
-The selected year is stored in URL search params so it persists on refresh and can be shared via link.
+   The Activity Overview (Commits, PRs, Issues, Code Reviews) updates dynamically using GitHub API data.
 
-7. Dynamic Contribution Activity
+8. **Server-Side Rendering for Token-Protected API Calls**
 
-The Activity Overview (Commits, PRs, Issues, Code Reviews) updates dynamically using GitHub API data.
+   Components that rely on authenticated API calls use SSR to ensure tokens never reach the client and remain secure.
 
-8. Server-Side Rendering for Token-Protected API Calls
+9. **Dynamic Repositories Tab**
 
-Components that rely on authenticated API calls use SSR to ensure tokens never reach the client and remain secure.
+   Repositories list is fully dynamic, populated using the GitHub API with:
 
-9. Dynamic Repositories Tab
+   - Repo details
+   - Stars, forks
+   - Languages
+   - Updated timestamps
 
-Repositories list is fully dynamic, populated using the GitHub API with:
-
-Repo details
-
-Stars, forks
-
-Languages
-
-Updated timestamps
-
-🖼️ Screenshots
+## 🖼️ Screenshots
 
 Screenshots of key features are attached in the repository.
-![](img1.png)
-![](img2.png)
-![](myScreen.png)
 
-🛠️ Tech Stack
+![Screenshot 1](img1.png)  
+![Screenshot 2](img2.png)  
+![My Screen](myScreen.png)
 
-Next.js (App Router)
+## 🛠️ Tech Stack
 
-TypeScript
-
-TailwindCSS
-
-Recharts
-
-Next Themes
-
-GitHub REST API
-
-Server-Side Rendering (SSR)
+- Next.js (App Router)
+- TypeScript
+- TailwindCSS
+- Recharts
+- Next Themes
+- GitHub REST API
+- Server-Side Rendering (SSR)
